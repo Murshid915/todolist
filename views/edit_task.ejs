@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Edit TASK</h1>
+    <form method="post">
+        <label>Title</label><br>
+        <input type="text" name="title" value="<%= task.title %>"><br>
+        <label>Description</label><br>
+        <textarea name="decription"><%= task.decription %></textarea><br>
+        <label>Deadline</label>
+        <input type="datetime-local" name="deadline" value="<%= new Date(task.deadline).toISOString().slice(0,16) %>"><br>
+        <label>Status</label><br>
+        <select name="status">
+            <option value="Not Started"<%= task.status.toLowerCase() == 'not started' ? 'selected' : '' %>>Not Started</option>
+            <option value="In Progress" <%= task.status.toLowerCase() == 'in progress' ? 'selected' : '' %>>In Progress</option>
+            <option value="Completed" <%= task.status.toLowerCase() == 'Completed' ? 'selected' : '' %>>Completed</option>
+        </select><br><br>
+        <button>SAVE CHANGES</button>
+    </form>
+</body>
+</html>

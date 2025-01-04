@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>ADD TASK</h1>
+    <form method="post" action="/add-task">
+        <label>Title</label><br>
+        <input type="text" name="title"><br>
+        <label>Description</label><br>
+        <textarea name="decription"></textarea><br>
+        <label>Deadline</label>
+        <input type="datetime-local" name="deadline"><br>
+        <label>Status</label><br>
+        <select name="status">
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select><br><br>
+        <button>ADD TASK </button>
+    </form>
+</body>
+</html>

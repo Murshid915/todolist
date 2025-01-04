@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMTask Manager</title>
+</head>
+<style>
+    .btn-success {
+        font-size: 20px;
+        padding: 10px;
+        text-decoration: none;
+        background: green;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <h1 align="center">Todo Tasks</h1>
+    <div style="display: flex; justify-content: end;"><a class="btn-success" href="/add-task">+ Add Task</a>
+    </div>
+    <% tasks.forEach(task=> { %>
+        <p>
+            #<%= task.id %>
+        </p>
+        <h3>
+            <%= task.title %>
+        </h3>
+        <p>Deadline: <strong>
+                <%= task.deadline %>
+            </strong></p>
+        <p>Status: <strong>
+                <%= task.status %>
+            </strong></p>
+            <p>
+                <a href="/view-task/<%=  task.id %>">Read More...</a>
+                <a href="/edit-task/<%=  task.id %>">Edit Task</a>
+                <a href="/delete-task/<%=  task.id %>">Delete Task</a>
+            </p>
+        <hr>
+        <% }) %>
+</body>
+
+</html>
