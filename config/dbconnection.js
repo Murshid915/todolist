@@ -8,8 +8,7 @@ const connection = createConnection({
 });
 
 
-module.exports = connection
-
+module.exports = connection;
 
 // connection.connect((err) => {
 //         console.log(`Database not connected ${err}`)

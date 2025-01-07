@@ -20,7 +20,7 @@
 
 <body>
     <h1 align="center">Todo Tasks</h1>
-    <div style="display: flex; justify-content: end;"><a class="btn-success" href="/add-task">+ Add Task</a>
+    <div style="display: flex; justify-content: end;"><a class="btn-success" href="/tasks/add">+ Add Task</a>
     </div>
     <% tasks.forEach(task=> { %>
         <p>
@@ -37,7 +37,7 @@
             </strong></p>
             <p>
                 <a href="/view-task/<%=  task.id %>">Read More...</a>
-                <a href="/edit-task/<%=  task.id %>">Edit Task</a>
+                <a href="/tasks/edit/<%=  task.id %>">Edit Task</a>
                 <a href="/delete-task/<%=  task.id %>">Delete Task</a>
             </p>
         <hr>
